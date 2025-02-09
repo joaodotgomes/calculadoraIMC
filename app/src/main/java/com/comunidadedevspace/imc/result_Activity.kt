@@ -19,7 +19,7 @@ val resultado = intent.getFloatExtra(KEY_RESULT_IMC,0f)
 
     val Tvresult = findViewById<TextView>(R.id.result)
     val Tvclassificacao = findViewById<TextView>(R.id.classificacao)
-    println("acao do botao"+ resultado)
+
 
 Tvresult.text = resultado.toString()
 
