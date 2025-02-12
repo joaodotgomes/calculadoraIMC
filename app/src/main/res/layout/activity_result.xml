@@ -5,23 +5,75 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
     tools:context=".result_Activity">
 
-    <TextView
-        android:id="@+id/result"
-        android:textSize="52sp"
-        android:textStyle="bold"
-        android:maxLength="5"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:id="@+id/vg_header"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/gradiente_bg"
         android:layout_height="wrap_content"
-        tools:text="55.55" />
+        >
+
+        <ImageView
+            android:src="@drawable/ic_weigth"
+            android:layout_width="55dp"
+            android:layout_height="50dp"
+            android:layout_margin="27dp"
+            app:tint = "@color/white"
+            />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="Calculador IMC"/>
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:text="Confira abaixo o resultado do seu IMC"
+            />
+
+        <TextView
+            android:id="@+id/result"
+            android:textSize="52sp"
+            android:textStyle="bold"
+            android:maxLength="5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
+            tools:text="55.55" />
+
+    </LinearLayout>
+
+
+
+
+
+
 
     <TextView
         android:id="@+id/classificacao_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="110dp"
         android:text="a sua classificacao do seu imc foi: " />
 
     <TextView
@@ -29,5 +81,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_gravity="center_horizontal"
         tools:text="NORMAL" />
 </LinearLayout>
+

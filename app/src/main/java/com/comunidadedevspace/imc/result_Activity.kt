@@ -21,6 +21,7 @@ val resultado = intent.getFloatExtra(KEY_RESULT_IMC,0f)
     val Tvclassificacao = findViewById<TextView>(R.id.classificacao)
 
 
+
 Tvresult.text = resultado.toString()
 
     val classificacao : String = if (resultado <= 18.5f){
@@ -35,7 +36,17 @@ Tvresult.text = resultado.toString()
         "OBESIDADE GRAVE"
     }
 
-Tvclassificacao.text = classificacao
+    Tvclassificacao.text = classificacao
+
+    when(classificacao){
+
+     "NORMAL" -> Tvclassificacao.setTextColor(resources.getColor(R.color.primaryGreen))
+        "SOBREPESO" -> Tvclassificacao.setTextColor(resources.getColor(R.color.primaryYellow))
+        "OBESIDADE"  -> Tvclassificacao.setTextColor(resources.getColor(R.color.primaryRed))
+        "OBESIDADE GRAVE" -> Tvclassificacao.setTextColor(resources.getColor(R.color.primaryRed))
+
+    }
+
 
 
 
